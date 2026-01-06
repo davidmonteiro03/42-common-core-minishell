@@ -6,14 +6,14 @@
 /*   By: dcaetano <dcaetano@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 10:47:02 by dcaetano          #+#    #+#             */
-/*   Updated: 2024/09/18 13:16:07 by dcaetano         ###   ########.fr       */
+/*   Updated: 2026/01/06 12:24:33 by dcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minishell.h"
 
-static void	spamchars(int const fd, size_t const len, char const c, \
-	bool const newline)
+static void	spamchars(int const fd, size_t const len, char const c,
+		bool const newline)
 {
 	if (fd == -1 || len == 0 || c == '\0')
 		return ;
