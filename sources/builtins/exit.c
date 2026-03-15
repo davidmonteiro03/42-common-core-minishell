@@ -82,7 +82,7 @@ void	builtins_exit(t_cmds *cmd, t_shell *shell)
 {
 	if (cmd == NULL || cmd->args == NULL || shell == NULL)
 		return ;
-	if (cmd->prev == NULL && cmd->next == NULL)
+	if (cmd->prev == NULL && cmd->next == NULL && isatty(STDIN_FILENO))
 		ft_putendl_fd("exit", STDERR_FILENO);
 	if (cmd->args[1] == NULL)
 		return (shell_hardreset(shell), exit(g_exit_status));
